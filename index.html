@@ -1,0 +1,62 @@
+<!--
+ * Author: Martina Farkasova
+ * Thesis: Process automation in Design sprint
+ * Date: 15.05.2019
+ -->
+
+<html>
+<head>
+    <style>
+
+        #page {
+        height: 100vh
+        }
+
+        label {
+        cursor: default;
+        }
+
+        button {
+        text-align: center;
+        padding: 8px;
+        margin: 10px 10px;
+        background-color: #97befc;
+        border-radius: 6px;
+        border: 1px solid #d6bcd6;
+        cursor: pointer;
+        }
+
+        #input {
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+        background: #FFFFFF;
+        resize: vertical;
+        width: 540px;
+        min-height: 50px;
+        }
+
+        #wordAnalysis td {
+        padding: 1px 3px 1px 5px;
+        }
+
+        .num-words-header {
+        font-weight: bold;
+        border-top: 1px solid #000;
+        }   
+    </style>
+    <script type="text/javascript" src="analysis.js"></script>
+</head>
+<body>
+    <div id="page">
+        <h3>Input text for analysis:</h3>
+        <p>Only the letters of the English alphabet (a-zA-Z) are allowed.</p>
+        <textarea id="input" cols="55" rows="10" placeholder="Enter your text here..."></textarea><br>
+        <p>Optionally, you can also restrict the minimum number of word occurences in the text (default value is 2).</p>
+            <label><span>Minimum no. of occurences: &nbsp;</span><input id="least" type="number" name="quantity" min="2" step="1" max="99"></label>
+            <br>
+            <button id="analyze">Analyze</button>
+            <br>
+            <h4>Results will be shown below:</h4>
+            <div id="results"></div>
+    </div>
+</body>
+</html>
